@@ -1,0 +1,43 @@
+@import '../../../styles/variables';
+
+.cover-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../../assets/voxel.png") center center no-repeat;
+  background-size: cover;
+  color: $white;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    font-family: $shrikhand;
+    font-weight: bold;
+  }
+
+  .scroll-button {
+    height: 2.8125rem;
+    width: 2.8125rem;
+    border-radius: 1.375rem;
+    border: solid 1px cssvar(yellow-dark);
+    background-color: cssvar(dark); 
+    color: cssvar(white);
+
+    &:hover {
+      background-color: cssvar(yellow);
+      color: cssvar(black);
+    }
+
+    span {
+      color: cssvar(white);
+    }
+  }
+
+  h3 {
+    font-family: $bungee;
+    font-weight: bold;
+    color: cssvar(yellow);
+  }
+}

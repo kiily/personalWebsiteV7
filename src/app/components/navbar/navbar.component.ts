@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { INavbarLinks } from '../../interfaces';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })

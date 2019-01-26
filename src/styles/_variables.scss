@@ -26,13 +26,17 @@ $padding-40: 2.5rem;
 
 // Colors 
 $yellow: #feda4a;
+$yellow-dark: #f7de83;
 $white: floralwhite;
 $dark: #292b2c;
+$black: black;
 
 $colors_map: (
     yellow: $yellow,
+    yellow-dark: $yellow-dark,
     white: $white,
-    dark: $dark
+    dark: $dark,
+    black: $black
 );
 
 $paddings-map: (
