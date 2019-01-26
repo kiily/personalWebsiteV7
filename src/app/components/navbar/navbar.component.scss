@@ -1,0 +1,39 @@
+@import '../../../styles/variables';
+
+
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: cssvar(dark);
+  z-index: 100;
+  .navbar-row {
+    display: flex;
+    .navbar-title {
+      display: flex;
+      font-family: $orbiton;
+      font-weight: bold;
+      margin: cssvar(padding-10) cssvar(padding-15);
+      color: cssvar(yellow);
+    }
+    .navbar-links {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      .navbar-link {
+        flex: 1;
+        text-align: center;
+        font-family: $orbiton;
+        font-weight: bold;
+        color: cssvar(white);
+        a:active {
+          color: cssvar(yellow);
+
+        }
+      }
+    }
+  }
+}

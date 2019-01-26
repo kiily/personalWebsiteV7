@@ -1,0 +1,61 @@
+// Font Variations
+$orbiton: "Orbitron", sans-serif;
+$bungee: "Bungee", cursive;
+$shrikhand: "Shrikhand", cursive;
+$source-code: "Source Code Pro", monospace;
+$lobster: "Lobster", cursive;
+$cabin: "Cabin Condensed", sans-serif;
+$roboto: "Roboto", sans-serif;
+
+// Font Sizes
+$font-xl: 20px;
+$font-l: 17px;
+$font-m: 15px;
+$font-s: 13px;
+$font-xs: 10px;
+
+// Paddings
+$padding-5: 0.3125rem;
+$padding-10: 0.625rem;
+$padding-15: 0.9375rem;
+$padding-20: 1.25rem;
+$padding-25: 1.5625rem;
+$padding-30: 1.875rem;
+$padding-35: 2.1875rem;
+$padding-40: 2.5rem;
+
+// Colors 
+$yellow: #feda4a;
+$white: floralwhite;
+$dark: #292b2c;
+
+$colors_map: (
+    yellow: $yellow,
+    white: $white,
+    dark: $dark
+);
+
+$paddings-map: (
+    padding-5: $padding-5,
+    padding-10: $padding-10,
+    padding-15: $padding-15,
+    padding-20: $padding-20,
+    padding-25: $padding-25,
+    padding-30: $padding-30,
+    padding-35: $padding-35,
+    padding-40: $padding-40,
+); 
+
+$fonts-map: (
+    font-s: $font-s
+);
+
+$variables-map: map-merge($fonts-map, $colors-map);
+$variables-map: map-merge($paddings-map, $variables-map);
+
+@function cssvar($varName) {
+    @if map-has-key($variables-map, $varName) {
+        @return var(--#{$varName}, map-get($variables-map, $varName));
+    }
+    @return var(--#{$varName});
+}
