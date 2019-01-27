@@ -1,5 +1,5 @@
 // Font Variations
-$orbiton: "Orbitron", sans-serif;
+$lato: "Lato", sans-serif;
 $bungee: "Bungee", cursive;
 $shrikhand: "Shrikhand", cursive;
 $source-code: "Source Code Pro", monospace;
@@ -30,13 +30,15 @@ $yellow-dark: #f7de83;
 $white: floralwhite;
 $dark: #292b2c;
 $black: black;
+$stable: #fafafa;
 
 $colors_map: (
     yellow: $yellow,
     yellow-dark: $yellow-dark,
     white: $white,
     dark: $dark,
-    black: $black
+    black: $black,
+    stable: $stable
 );
 
 $paddings-map: (
@@ -51,7 +53,11 @@ $paddings-map: (
 ); 
 
 $fonts-map: (
-    font-s: $font-s
+    font-xs: $font-xs,
+    font-s: $font-s,
+    font-m: $font-m,
+    font-l: $font-l,
+    font-xl: $font-xl
 );
 
 $variables-map: map-merge($fonts-map, $colors-map);
@@ -62,4 +68,11 @@ $variables-map: map-merge($paddings-map, $variables-map);
         @return var(--#{$varName}, map-get($variables-map, $varName));
     }
     @return var(--#{$varName});
+}
+
+@mixin card-styles {
+    background-color: white;
+    border-radius: 6px;
+    padding: cssvar(padding-20);
+    box-shadow: 0 5px 13px 0 rgba(40, 47, 54, 0.08);
 }

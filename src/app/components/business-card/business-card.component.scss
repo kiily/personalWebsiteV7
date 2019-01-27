@@ -1,0 +1,50 @@
+@import '../../../styles/variables';
+
+.card-container {
+    @include card-styles();
+    position: relative;
+    min-height: 180px;
+    .card-header {
+        font-size: cssvar(font-l);
+        font-weight: bold;
+        margin-bottom: cssvar(padding-20);
+    }
+    .card-content {
+        .personal-info {
+            font-size: cssvar(font-s);
+            .last-name,
+            .email {
+                margin-bottom: cssvar(padding-5);
+            }
+        }
+        .contact-methods {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: cssvar(padding-20);
+            color: cssvar(black);
+            max-width: 55%;
+            .contact-methods-title {
+                font-size: cssvar(font-s);
+                flex-basis: 100%;
+                margin-bottom: cssvar(padding-10);
+            }
+            .contact-method {
+                flex-basis: 39%;
+                margin-right: cssvar(padding-20);
+                margin-bottom: cssvar(padding-10);
+                a {
+                    color: cssvar(black);
+                }
+            }
+        }
+    }
+    .card-image {
+        position: absolute;
+        margin: cssvar(padding-20);
+        top: 0;
+        right: 0;
+        img {
+            width: 122px;
+        }
+    }
+}

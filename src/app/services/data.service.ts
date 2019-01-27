@@ -1,8 +1,10 @@
-import { EDUCATION_DATA, PRO_XP_DATA, PROJECTS_DATA, ITXP_DATA } from './../data';
+import { IPersonalData } from './../interfaces/personal-data.interface';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { IQualification, IProfessionalXP, IProject, IITXP } from '../interfaces';
+
+import { IQualification, IProfessionalXP, IProject, IITXP, IBusinessCard } from '../interfaces';
+import { EDUCATION_DATA, PRO_XP_DATA, PROJECTS_DATA, ITXP_DATA, PERSONAL_DATA } from './../data';
 
 @Injectable()
 export class DataService {
@@ -21,6 +23,10 @@ export class DataService {
     return of(PROJECTS_DATA);
   }
 
+  getPersonalData(): Observable<IPersonalData> {
+    return of(PERSONAL_DATA)
+  }
+
   getProgrammingLanguages(): Observable<IITXP[]> {
     return of(ITXP_DATA).pipe(map( technologies => {
       return technologies.filter(tech => tech.type === 'language');
@@ -35,7 +41,7 @@ export class DataService {
 
   getWebDevTools(): Observable<IITXP[]> {
     return of(ITXP_DATA).pipe(map( technologies => {
-      return technologies.filter( tech => tech.type === 'build.tool');
+      return technologies.filter( tech => tech.type === 'build-tool');
     }));
   }
 
@@ -44,7 +50,4 @@ export class DataService {
       return technologies.filter( tech => tech.type === 'data-tool');
     }));
   }
-
-
-  
 }

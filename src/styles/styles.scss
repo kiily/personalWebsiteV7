@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css?family=Orbitron|Bungee|Source+Code+Pro|Lobster|Shrikhand");
+@import url("https://fonts.googleapis.com/css?family=Lato|Bungee|Source+Code+Pro|Lobster|Shrikhand");
 @import "_variables.scss";
 
 html,
 body {
   height: 100%;
   margin: 0;
+  font-family: $lato;
+  background-color: cssvar(stable);
 }

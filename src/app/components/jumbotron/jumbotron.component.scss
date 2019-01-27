@@ -24,6 +24,7 @@
     border: solid 1px cssvar(yellow-dark);
     background-color: cssvar(dark); 
     color: cssvar(white);
+    outline: none;
 
     &:hover {
       background-color: cssvar(yellow);

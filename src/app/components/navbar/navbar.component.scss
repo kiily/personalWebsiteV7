@@ -12,7 +12,7 @@
     display: flex;
     .navbar-title {
       display: flex;
-      font-family: $orbiton;
+      font-family: $lato;
       font-weight: bold;
       margin: cssvar(padding-10) cssvar(padding-15);
       color: cssvar(yellow);
@@ -26,12 +26,14 @@
       .navbar-link {
         flex: 1;
         text-align: center;
-        font-family: $orbiton;
+        font-family: $lato;
         font-weight: bold;
         color: cssvar(white);
-        a:active {
-          color: cssvar(yellow);
-
+        a {
+          text-decoration: none;
+          &:active {
+            color: cssvar(yellow);
+          }
         }
       }
     }

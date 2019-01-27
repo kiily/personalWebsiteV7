@@ -1,0 +1,22 @@
+@import '../../../styles/variables';
+
+.profile-container {
+    .business-card-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: cssvar(padding-20) cssvar(padding-5);
+    }
+    .description-card {
+        @include card-styles();
+        margin: cssvar(padding-20);
+        .description-card-title {
+            margin-bottom: cssvar(padding-20);
+            font-size: cssvar(font-l);
+            font-weight: bold;
+        }
+        .description-card-content {
+            text-align: justify;
+        }
+    }
+}
