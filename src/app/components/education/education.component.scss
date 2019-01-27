@@ -6,8 +6,7 @@
     width: 100%;
     border-bottom: 2px solid black;
 
-    .education-container {
-        padding: cssvar(padding-20);
+    .container {
         .education-title {
             @include section_title();
         }

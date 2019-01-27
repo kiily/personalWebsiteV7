@@ -11,3 +11,11 @@ body {
   font-family: $lato;
   background-color: cssvar(stable);
 }
+
+.feature-title {
+  @include section-title();
+}
+
+.container {
+  padding: cssvar(padding-20);
+}

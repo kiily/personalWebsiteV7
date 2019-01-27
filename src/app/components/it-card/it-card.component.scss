@@ -1,0 +1,42 @@
+@import '../../../styles/variables';
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+  }
+
+.container {
+    &:hover {
+        animation: pulse 3s infinite;
+    }
+    @include card-styles();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 150px;
+    &.flipped {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
+        .card-header {
+            align-self: flex-start;
+            font-size: cssvar(font-l);
+            font-weight: bold;
+            margin-bottom: cssvar(padding-20);
+        }
+        .card-description {
+            text-align: justify;
+        }
+    }
+    .card-image {
+        img {
+            max-width: 250px;
+            max-height: 150px;
+        }
+    }
+}

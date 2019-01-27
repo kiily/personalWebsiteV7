@@ -1,0 +1,9 @@
+<div class="container" [ngClass]="{'flipped' : isFlipped }" (click)="flipCard()">
+    <div *ngIf="!isFlipped; else backSide" class="card-image">
+        <img src="{{ itXP.imgLogo }}" [alt]="itXP.name">
+    </div>
+    <ng-template #backSide>
+      <div class="card-header">{{ itXP.name }}</div>
+      <div class="card-description">{{ itXP.description }}</div>
+    </ng-template>
+</div>

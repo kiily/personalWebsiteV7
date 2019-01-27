@@ -27,15 +27,15 @@ export class NavbarComponent implements OnInit {
         linkText: 'Education'
       },
       {
-        href: '#it-xp',
+        href: '#it-xp-feature',
         linkText: 'IT Experience'
       },
       {
-        href: '#skills',
+        href: '#skills-feature',
         linkText: 'Language Skills'
       },
       {
-        href: '#projects',
+        href: '#projects-feature',
         linkText: 'My Projects'
       }
     ]

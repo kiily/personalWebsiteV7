@@ -1,0 +1,17 @@
+@import '../../../styles/variables';
+
+#it-xp-feature {
+    background: url("../../../assets/green_board.jpg") center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    .container {
+        .swiper-slide {
+            .card-container {
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                grid-row-gap: cssvar(padding-20);
+                margin: cssvar(padding-15);
+            }
+        }
+    }
+}

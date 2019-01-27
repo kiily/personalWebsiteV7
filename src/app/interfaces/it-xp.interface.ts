@@ -3,7 +3,7 @@ export interface IITXP {
     name: string;
     imgLogo: string;
     description: string;
-    type: ITXPType;
+    type?: ITXPType;
 }
 
 export type ITXPType = 'language' | 'build-tool' | 'framework' | 'data-tool';
