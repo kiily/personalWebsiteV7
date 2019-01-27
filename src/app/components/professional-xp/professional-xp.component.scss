@@ -1,0 +1,7 @@
+@import '../../../styles/variables';
+
+.professional-xp-container {
+    .professional-xp-title {
+        @include section-title()
+    }
+}

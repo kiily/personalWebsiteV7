@@ -5,12 +5,16 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { PersonalProfileComponent } from './personal-profile/personal-profile.component';
 import { BusinessCardComponent } from './business-card/business-card.component';
+import { EducationComponent } from './education/education.component';
+import { ProfessionalXPComponent } from './professional-xp/professional-xp.component';
 
 const COMPONENTS = [
   NavbarComponent,
   JumbotronComponent,
   BusinessCardComponent,
-  PersonalProfileComponent
+  PersonalProfileComponent,
+  EducationComponent,
+  ProfessionalXPComponent
 ]
 
 const SERVICES = [

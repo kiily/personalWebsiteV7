@@ -1,3 +1,4 @@
+
 // Font Variations
 $lato: "Lato", sans-serif;
 $bungee: "Bungee", cursive;
@@ -8,6 +9,8 @@ $cabin: "Cabin Condensed", sans-serif;
 $roboto: "Roboto", sans-serif;
 
 // Font Sizes
+$section-title: 40px;
+$font-xxl: 28px;
 $font-xl: 20px;
 $font-l: 17px;
 $font-m: 15px;
@@ -53,26 +56,16 @@ $paddings-map: (
 ); 
 
 $fonts-map: (
+    section-title: $section-title,
     font-xs: $font-xs,
     font-s: $font-s,
     font-m: $font-m,
     font-l: $font-l,
-    font-xl: $font-xl
+    font-xl: $font-xl,
+    font-xxl: $font-xxl
 );
 
 $variables-map: map-merge($fonts-map, $colors-map);
 $variables-map: map-merge($paddings-map, $variables-map);
 
-@function cssvar($varName) {
-    @if map-has-key($variables-map, $varName) {
-        @return var(--#{$varName}, map-get($variables-map, $varName));
-    }
-    @return var(--#{$varName});
-}
-
-@mixin card-styles {
-    background-color: white;
-    border-radius: 6px;
-    padding: cssvar(padding-20);
-    box-shadow: 0 5px 13px 0 rgba(40, 47, 54, 0.08);
-}
+@import "./_mixins.scss";

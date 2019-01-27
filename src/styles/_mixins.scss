@@ -1,0 +1,21 @@
+@function cssvar($varName) {
+    @if map-has-key($variables-map, $varName) {
+        @return var(--#{$varName}, map-get($variables-map, $varName));
+    }
+    @return var(--#{$varName});
+}
+
+@mixin card-styles {
+    background-color: white;
+    border-radius: 6px;
+    padding: cssvar(padding-20);
+    box-shadow: 0 5px 13px 0 rgba(40, 47, 54, 0.08);
+}
+
+@mixin section-title {
+    font-family: $lobster;
+    padding: cssvar(padding-20);
+    font-size: cssvar(section-title);
+    font-weight: bold;
+    color: cssvar(white);
+}

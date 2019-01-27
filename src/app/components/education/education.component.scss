@@ -1,0 +1,41 @@
+@import '../../../styles/variables';
+
+#education-feature {
+    background: url("../../../assets/stars.jpg") center center no-repeat;
+    background-size: cover;
+    width: 100vw;
+    border-bottom: 2px solid black;
+
+    .education-container {
+        .education-title {
+            @include section_title();
+        }
+        .qualifications-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+            .card-container {
+                @include card-styles();
+                flex-basis: 85%;
+                margin-bottom: cssvar(padding-20);
+
+                .card-header {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: cssvar(padding-15);
+                    span {
+                        margin-right: cssvar(padding-5);
+                    }
+                    .qualification-name {
+                        flex: 1;
+                        font-size: cssvar(font-xxl);
+                    }
+                    .qualification-date-loc {
+                        font-family: $source-code;
+                    }
+                }
+            }
+        }
+    }
+}

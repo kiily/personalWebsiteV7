@@ -1,7 +1,9 @@
 @import '../../../styles/variables';
 
 .profile-container {
+    display: flex;
     .business-card-container {
+        flex: 1;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -9,6 +11,7 @@
     }
     .description-card {
         @include card-styles();
+        flex: 1;
         margin: cssvar(padding-20);
         .description-card-title {
             margin-bottom: cssvar(padding-20);

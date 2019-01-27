@@ -15,11 +15,15 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.navbarLinks = [
       {
-        href: '#profile',
+        href: '#profile-feature',
         linkText: 'Personal Profile'
       },
       {
-        href: '#professional-xp',
+        href: '#education-feature',
+        linkText: 'Education'
+      },
+      {
+        href: '#professional-xp-feature',
         linkText: 'Professional Experience'
       },
       {

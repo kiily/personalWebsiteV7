@@ -1,0 +1,16 @@
+<section id="education-feature">
+  <div class="education-container">
+    <div class="education-title">Education: </div>
+    <div class="qualifications-container">
+      <div class="card-container" *ngFor="let qualification of qualifications">
+        <div class="card-header">
+          <div class="qualification-name">{{ qualification.qualificationName }}</div>
+          <div class="qualification-date-loc"><span class="fa fa-calendar"></span>{{ qualification.date }} <span class="fa fa-university"></span>{{ qualification.location }}</div>
+        </div>
+        <div class="card-content">
+          {{ qualification.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

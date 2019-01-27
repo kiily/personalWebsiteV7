@@ -6,7 +6,8 @@
   align-items: center;
   background: url("../../../assets/voxel.png") center center no-repeat;
   background-size: cover;
-  color: $white;
+  color: cssvar(white);
+  width: 100vw;
   height: 100%;
   text-align: center;
   display: flex;
