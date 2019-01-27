@@ -2,17 +2,18 @@
 
 .profile-container {
     display: flex;
+    padding: cssvar(padding-20);
     .business-card-container {
         flex: 1;
         width: 100%;
         display: flex;
         justify-content: center;
-        margin: cssvar(padding-20) cssvar(padding-5);
+        margin: cssvar(padding-20) cssvar(padding-20) cssvar(padding-20) 0;
     }
     .description-card {
         @include card-styles();
         flex: 1;
-        margin: cssvar(padding-20);
+        margin: cssvar(padding-20) 0;
         .description-card-title {
             margin-bottom: cssvar(padding-20);
             font-size: cssvar(font-l);

@@ -3,10 +3,11 @@
 #education-feature {
     background: url("../../../assets/stars.jpg") center center no-repeat;
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     border-bottom: 2px solid black;
 
     .education-container {
+        padding: cssvar(padding-20);
         .education-title {
             @include section_title();
         }

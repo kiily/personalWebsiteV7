@@ -5,4 +5,5 @@ export interface IProfessionalXP {
     location: string;
     description: string;
     link?: string;
+    reportTitle?: string;
 }

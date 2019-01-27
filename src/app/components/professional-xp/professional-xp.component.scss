@@ -1,7 +1,21 @@
 @import '../../../styles/variables';
 
-.professional-xp-container {
-    .professional-xp-title {
-        @include section-title()
+#professional-xp-feature {
+    background: url("../../../assets/work.jpg") center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    .professional-xp-container {
+        padding: cssvar(padding-20);
+        .professional-xp-title {
+            @include section-title();
+        }
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            professional-xpcard {
+                margin-bottom: cssvar(padding-20);
+            }
+        }
     }
+
 }

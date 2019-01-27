@@ -7,6 +7,7 @@ import { PersonalProfileComponent } from './personal-profile/personal-profile.co
 import { BusinessCardComponent } from './business-card/business-card.component';
 import { EducationComponent } from './education/education.component';
 import { ProfessionalXPComponent } from './professional-xp/professional-xp.component';
+import { ProfessionalXPCardComponent } from './professional-xpcard/professional-xpcard.component';
 
 const COMPONENTS = [
   NavbarComponent,
@@ -14,7 +15,8 @@ const COMPONENTS = [
   BusinessCardComponent,
   PersonalProfileComponent,
   EducationComponent,
-  ProfessionalXPComponent
+  ProfessionalXPComponent,
+  ProfessionalXPCardComponent
 ]
 
 const SERVICES = [

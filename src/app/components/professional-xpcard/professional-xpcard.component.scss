@@ -1,0 +1,50 @@
+@import '../../../styles/variables';
+
+.pro-xp-card {
+    position: relative;
+    @include card-styles();
+    display: flex;
+    flex-direction: column;
+    .card-header {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        &.open {
+            margin-bottom: cssvar(padding-25);
+        }
+        .position {
+            flex: 0.5;
+            font-weight: bold;
+            font-size: cssvar(font-l);
+        }
+        .date-loc-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            .date,
+            .location {
+                span {
+                    margin-right: cssvar(padding-5);
+                }
+                margin-right: cssvar(padding-15);
+            }
+            .location {
+                flex: 1;
+            }
+            .collapse-container {
+                margin-left: cssvar(padding-20);
+                font-size: cssvar(large-icon);
+            }
+        }
+    }
+    .card-content {
+        .card-description {
+            margin-bottom: cssvar(padding-20);
+        }
+        .report-container {
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+}

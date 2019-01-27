@@ -14,8 +14,8 @@
 
 @mixin section-title {
     font-family: $lobster;
-    padding: cssvar(padding-20);
     font-size: cssvar(section-title);
     font-weight: bold;
     color: cssvar(white);
+    margin-bottom: cssvar(padding-20);
 }

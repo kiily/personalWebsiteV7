@@ -19,12 +19,12 @@ export class NavbarComponent implements OnInit {
         linkText: 'Personal Profile'
       },
       {
-        href: '#education-feature',
-        linkText: 'Education'
-      },
-      {
         href: '#professional-xp-feature',
         linkText: 'Professional Experience'
+      },
+      {
+        href: '#education-feature',
+        linkText: 'Education'
       },
       {
         href: '#it-xp',

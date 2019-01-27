@@ -10,6 +10,7 @@ $roboto: "Roboto", sans-serif;
 
 // Font Sizes
 $section-title: 40px;
+$large-icon: 35px;
 $font-xxl: 28px;
 $font-xl: 20px;
 $font-l: 17px;
@@ -57,6 +58,7 @@ $paddings-map: (
 
 $fonts-map: (
     section-title: $section-title,
+    large-icon: $large-icon,
     font-xs: $font-xs,
     font-s: $font-s,
     font-m: $font-m,

@@ -1,5 +1,8 @@
 <section id="professional-xp-feature">
   <div class="professional-xp-container">
     <div class="professional-xp-title">Work Experience: </div>
+    <div class="cards-container">
+      <professional-xpcard *ngFor="let proXP of professionalXP" [professionalXP]="proXP"></professional-xpcard>
+    </div>
   </div>
 </section>

@@ -1,0 +1,22 @@
+<div class="pro-xp-card">
+  <div class="card-header" [ngClass]="{'open' : !isCollapsed }">
+    <div class="position">{{ professionalXP.position }}</div>
+    <div class="date-loc-container">
+      <div class="date"><span class="fa fa-calendar"></span> {{ professionalXP.date }}</div>
+      <div class="location"><span class="fa fa-map-marker"></span> {{ professionalXP.location }}</div>
+      <div class="collapse-container" (click)="toggleCard()">
+        <span *ngIf="isCollapsed" class="fa fa-caret-down"></span>
+        <span *ngIf="!isCollapsed" class="fa fa-caret-up"></span>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!isCollapsed" class="card-content">
+    <div class="card-description">
+      {{ professionalXP.description }}
+    </div>
+    <div *ngIf="professionalXP.link" class="report-container">
+      <div class="report-title"> {{ professionalXP.reportTitle }}</div>
+      <iframe height="400" [src]="sanitizer.bypassSecurityTrustResourceUrl(professionalXP.link)" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+  </div>
+</div>
