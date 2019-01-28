@@ -31,7 +31,7 @@
         color: cssvar(white);
         a {
           text-decoration: none;
-          &:active {
+          &:hover {
             color: cssvar(yellow);
           }
         }

@@ -33,6 +33,7 @@ $yellow: #feda4a;
 $yellow-dark: #f7de83;
 $white: floralwhite;
 $dark: #292b2c;
+$light-grey: #eceeef;
 $black: black;
 $stable: #fafafa;
 
@@ -42,7 +43,8 @@ $colors_map: (
     white: $white,
     dark: $dark,
     black: $black,
-    stable: $stable
+    stable: $stable,
+    light-grey: $light-grey
 );
 
 $paddings-map: (

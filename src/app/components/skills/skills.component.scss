@@ -1,0 +1,44 @@
+@import '../../../styles/variables';
+
+#skills-feature {
+    .container {
+        .feature-title {
+            color: cssvar(dark);
+        }
+        .table-container {
+            border-radius: 6px;
+            box-shadow: 0 5px 13px 0 rgba(40, 47, 54, 0.08);
+            .table-header {
+                display: grid;
+                grid-template-columns: 50% 25% 25%;
+                padding: cssvar(padding-20);
+                background-color: cssvar(dark);
+                color: cssvar(white);
+                font-weight: bold;
+                font-size: cssvar(font-l);
+                border-radius: 6px 6px 0px 0px;
+            }
+            .table-content {
+                display: grid;
+                grid-template-columns: 100%;
+                margin-top: cssvar(padding-10);
+                .table-row {
+                    display: grid;
+                    grid-template-columns: 50% 25% 25%;
+                    padding: cssvar(padding-10);
+                    border-bottom: 1px solid cssvar(light-grey);
+                    .flag {
+                        i {
+                            font-size: cssvar(font-xl);
+                            border-radius: 6px;
+                        }
+                    }
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+
+        }
+    }
+}

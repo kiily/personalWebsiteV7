@@ -5,3 +5,4 @@ export * from './projects.interface';
 export * from './qualification.interface';
 export * from './business-card.interface';
 export * from './personal-data.interface';
+export * from './language-skills.interface';

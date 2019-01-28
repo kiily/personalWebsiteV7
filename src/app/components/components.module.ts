@@ -12,6 +12,7 @@ import { ProfessionalXPComponent } from './professional-xp/professional-xp.compo
 import { ProfessionalXPCardComponent } from './professional-xpcard/professional-xpcard.component';
 import { ItXPComponent } from './it-xp/it-xp.component';
 import { ItCardComponent } from './it-card/it-card.component';
+import { SkillsComponent } from './skills/skills.component';
 
 const COMPONENTS = [
   NavbarComponent,
@@ -22,7 +23,8 @@ const COMPONENTS = [
   ProfessionalXPComponent,
   ProfessionalXPCardComponent,
   ItXPComponent,
-  ItCardComponent
+  ItCardComponent,
+  SkillsComponent
 ]
 
 const SERVICES = [

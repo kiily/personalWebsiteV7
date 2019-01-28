@@ -1,0 +1,19 @@
+<section id="skills-feature">
+  <div class="container">
+    <div class="feature-title">Language Skills: </div>
+    <div class="table-container">
+      <div class="table-header">
+        <div class="language-header">Language</div>
+        <div></div>
+        <div class="proficiency-header">Proficiency</div>
+      </div>
+      <div class="table-content">
+        <div class="table-row" *ngFor="let language of languageSkills">
+          <div class="language">{{ language.name }}</div>
+          <div class="flag"><i class="{{ 'flag-icon flag-icon-' + language.flagIcon }}"></i></div>
+          <div class="proficiency">{{ language.proficiency }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

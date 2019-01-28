@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { IQualification, IProfessionalXP, IProject, IITXP, IBusinessCard } from '../interfaces';
-import { EDUCATION_DATA, PRO_XP_DATA, PROJECTS_DATA, ITXP_DATA, PERSONAL_DATA } from './../data';
+import { IQualification, IProfessionalXP, IProject, IITXP, ILanguageSkills } from '../interfaces';
+import { EDUCATION_DATA, PRO_XP_DATA, PROJECTS_DATA, ITXP_DATA, PERSONAL_DATA, LANGUAGE_SKILLS_DATA } from '../data';
 
 @Injectable()
 export class DataService {
@@ -21,6 +21,10 @@ export class DataService {
 
   getProjects(): Observable<IProject[]> {
     return of(PROJECTS_DATA);
+  }
+  
+  getLanguageSkillsData(): Observable<ILanguageSkills[]> {
+    return of(LANGUAGE_SKILLS_DATA);
   }
 
   getPersonalData(): Observable<IPersonalData> {
