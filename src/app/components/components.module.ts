@@ -13,6 +13,8 @@ import { ProfessionalXPCardComponent } from './professional-xpcard/professional-
 import { ItXPComponent } from './it-xp/it-xp.component';
 import { ItCardComponent } from './it-card/it-card.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
 
 const COMPONENTS = [
   NavbarComponent,
@@ -24,15 +26,18 @@ const COMPONENTS = [
   ProfessionalXPCardComponent,
   ItXPComponent,
   ItCardComponent,
-  SkillsComponent
-]
+  SkillsComponent,
+  ProjectsComponent
+];
 
 const SERVICES = [
   DataService
-]
+];
+
 @NgModule({
   declarations: [
-    ...COMPONENTS
+    ...COMPONENTS,
+    ProjectCardComponent
   ],
   imports: [
     CommonModule,

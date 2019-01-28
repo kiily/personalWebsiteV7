@@ -1,0 +1,12 @@
+@import '../../../styles/variables';
+
+#projects-feature {
+    background: url("../../../assets/walking-trooper.jpg") center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    .cards-container {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-column-gap: cssvar(padding-10);
+    }
+}

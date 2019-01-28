@@ -25,8 +25,9 @@ export const PERSONAL_DATA: IPersonalData = {
     businessCard: BUSINESS_CARD,
     introText: `I was born in Luxembourg and attended the European School of Luxembourg, both for primary and secondary education. I then
     moved to London (2013) and graduated from UCL with a BSc Biomedical Sciences (2016). Despite being really interested
-    in Biology, I started coding with Python and shifted my focus to IT and computing. I then did an MSc Computer
-    Science at UCL, graduating in september 2017.`,
+    in Biology, I discovered coding through Python and shifted my focus to IT and computing. I then did an MSc Computer
+    Science at UCL, graduating in September 2017. I now work as a Frontend Developer at YOOBIC LTD.\r I love to read and learn new things and I am always open to try
+    new technologies and languages out there.`,
 }
 
 

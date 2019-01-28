@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="card-header">
+    <div class="card-title">{{ project.title }}</div>
+    <div class="card-link">
+      <a [href]="project.githubLink" target="_blank">
+        <i class="fa fa-github fa-lg"></i>
+      </a>
+    </div>
+  </div>
+  <div class="card-content">
+    <div class="description">
+      {{ project.description }}
+    </div>
+    <div class="technologies-container">
+      <span class="technology" *ngFor="let technology of project.technologies">
+          {{ technology }}
+      </span>
+    </div>
+  </div>
+</div>
