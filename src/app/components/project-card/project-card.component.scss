@@ -2,6 +2,7 @@
 
 .container {
     @include card-styles();
+    min-height: 240px;
     .card-header { 
         display: flex;
         margin-bottom: cssvar(padding-20);
@@ -23,7 +24,9 @@
     .card-content {
         .description {
             margin-bottom: cssvar(padding-15);
-        }
+        }  
+    }
+    .card-footer {
         .technologies-container {
             display: flex;
             flex-wrap: wrap;
@@ -39,6 +42,6 @@
                 padding: cssvar(padding-5);
                 border-radius: cssvar(padding-10);
             }
-        }     
+        }   
     }
 }
