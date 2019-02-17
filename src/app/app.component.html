@@ -1,8 +1,10 @@
-<navbar></navbar>
-<app-jumbotron></app-jumbotron>
-<personal-profile></personal-profile>
-<professional-xp></professional-xp>
-<education></education>
-<it-xp></it-xp>
-<skills></skills>
-<app-projects></app-projects>
+<div class="app-container" (scroll)="onAppScroll($event)">
+    <navbar [class.hide]="!showNavbar" [class.show]="showNavbar"></navbar>
+    <jumbotron></jumbotron>
+    <personal-profile></personal-profile>
+    <professional-xp></professional-xp>
+    <education></education>
+    <it-xp></it-xp>
+    <skills></skills>
+    <projects></projects>
+</div>

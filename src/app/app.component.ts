@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'personalWebsiteV7';
+
+  public title = `Miguel's website`;
+  public currentScrollPosition: number = 0;
+  public showNavbar: boolean = true;
+
+  onAppScroll(event): void {
+    const newScrollPosition = event.target.scrollTop;
+    if ( newScrollPosition > this.currentScrollPosition) {
+      // Scrolling down, hide the navbar
+      this.showNavbar = false;
+    } else {
+      // Scrolling up, show the navbar
+      this.showNavbar = true;
+    }
+    this.currentScrollPosition = newScrollPosition;
+  }
 }

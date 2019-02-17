@@ -1,8 +1,21 @@
 @import '../../../styles/variables';
 
+:host(.hide) {
+  .navbar-container {
+    transform: translateY(-40px);
+    transition: all 0.5s ease-in;
+  }
+}
+
+:host(.show) {
+  .navbar-container {
+    transform: translateY(0px);
+    transition: all 0.5s ease-in;
+  }
+}
 
 .navbar-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;

@@ -1,0 +1,10 @@
+@import '../styles/variables';
+
+.app-container {
+    display: block;
+    scroll-behavior: smooth;
+    overflow: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
