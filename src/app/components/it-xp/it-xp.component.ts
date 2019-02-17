@@ -10,12 +10,12 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 })
 export class ItXPComponent implements OnInit {
 
-  private languages: IITXP[];
-  private frameworks: IITXP[];
-  private buildTools: IITXP[];
-  private dataTools: IITXP[];
+  public languages: IITXP[];
+  public frameworks: IITXP[];
+  public buildTools: IITXP[];
+  public dataTools: IITXP[];
 
-  private swiperConfig: SwiperConfigInterface = {
+  public swiperConfig: SwiperConfigInterface = {
     a11y: true,
     direction: 'horizontal',
     slidesPerView: 1,

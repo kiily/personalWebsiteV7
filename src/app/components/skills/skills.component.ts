@@ -9,7 +9,7 @@ import { ILanguageSkills } from '../../interfaces';
 })
 export class SkillsComponent implements OnInit {
 
-  private languageSkills: ILanguageSkills[];
+  public languageSkills: ILanguageSkills[];
 
   constructor(private dataService: DataService) { }
 

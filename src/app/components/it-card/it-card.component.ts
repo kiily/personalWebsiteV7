@@ -10,7 +10,7 @@ export class ItCardComponent implements OnInit {
 
   @Input() itXP: IITXP;
 
-  private isFlipped: boolean = false;
+  public isFlipped: boolean = false;
 
   constructor() { }
 

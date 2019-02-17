@@ -3,7 +3,7 @@ import { DataService } from './../../services/data.service';
 import { IProject } from '../../interfaces';
 
 @Component({
-  selector: 'app-projects',
+  selector: 'projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })

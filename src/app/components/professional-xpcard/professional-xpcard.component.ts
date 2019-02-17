@@ -11,7 +11,7 @@ export class ProfessionalXPCardComponent implements OnInit {
 
   @Input() professionalXP: IProfessionalXP;
 
-  private isCollapsed: boolean = true;
+  public isCollapsed: boolean = true;
   private cardLink: string;
 
   constructor(private sanitizer: DomSanitizer) { }
