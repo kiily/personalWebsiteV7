@@ -1,10 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { INavbarLinks } from '../../interfaces';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
+  animations: [
+    trigger('collapse', [
+      state('collapsed', style({
+        opacity: 0
+      })),
+      state('open', style({
+        opacity: 1
+      })),
+      transition('open => collapsed', [
+        animate('0.5s')
+      ]),
+      transition('collapsed => open', [
+        animate('0.75s')
+      ]),
+    ])
+  ]
 })
 export class NavbarComponent implements OnInit {
 

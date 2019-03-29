@@ -3,7 +3,7 @@
       <div class="navbar-collapsible" (click)="toggleNavbar()">
         <span class="fa fa-l fa-bars"></span>
       </div>
-      <div class="navbar-collapsible-links" *ngIf="!collapsed">
+      <div [@collapse]="collapsed ? 'collapsed' : 'open'" class="navbar-collapsible-links">
           <div class="navbar-link" *ngFor="let link of navbarLinks">
             <a class="navbar-link" [href]="link.href">{{link.linkText}}</a>
           </div>
