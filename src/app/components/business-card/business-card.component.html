@@ -1,33 +1,37 @@
 <div class="card-container">
   <div class="card-header">Personal Profile:</div>
   <div class="card-content">
-    <div class="personal-info">
-      <div class="first-name">
-        <span><strong>First Name:</strong> {{ businessCardConfig.firstName }}</span>
+    <div class="card-content-left">
+      <div class="personal-info">
+        <div class="first-name">
+          <span><strong>First Name:</strong> {{ businessCardConfig.firstName }}</span>
+        </div>
+        <div class="last-name">
+          <span><strong>Last Name:</strong> {{ businessCardConfig.lastName }}</span>
+        </div>
+        <div class="email">
+          <span><strong>Email:</strong> {{ businessCardConfig.email }}</span>
+        </div>
       </div>
-      <div class="last-name">
-        <span><strong>Last Name:</strong> {{ businessCardConfig.lastName }}</span>
-      </div>
-      <div class="email">
-        <span><strong>Email:</strong> {{ businessCardConfig.email }}</span>
-      </div>
-    </div>
-    <div class="contact-methods">
       <div class="contact-methods-title">Get in touch:</div>
-      <div class="contact-method">
-          <a href="{{'mailto:' + businessCardConfig.email}}" alt="email">
-              <span class="fa fa-m fa-envelope-o"><strong> Email</strong></span>
-          </a>
-      </div>
-      <div *ngFor="let contactMethod of businessCardConfig?.contactMethods" class="contact-method">
-        <a [href]="contactMethod.link">
-          <span class="{{'fa fa-m fa-' + contactMethod.name.toLowerCase()}}"> {{ contactMethod.name }}</span>
-          <span *ngIf="contactMethod.profileAlias">: {{ contactMethod.profileAlias }}</span>
-        </a>
+      <div class="contact-methods">
+          <div class="contact-method">
+              <a href="{{'mailto:' + businessCardConfig.email}}" alt="email">
+                  <span class="fa fa-m fa-envelope-o"><strong> Email</strong></span>
+              </a>
+          </div>
+          <div *ngFor="let contactMethod of businessCardConfig?.contactMethods" class="contact-method">
+            <a [href]="contactMethod.link">
+              <span class="{{'fa fa-m fa-' + contactMethod.name.toLowerCase()}}"> {{ contactMethod.name }}</span>
+              <span *ngIf="contactMethod.profileAlias">: {{ contactMethod.profileAlias }}</span>
+            </a>
+          </div>
+        </div>
+    </div>
+    <div class="card-content-right">
+      <div class="card-image">
+          <img class="photo" [src]="businessCardConfig.photoUrl">
       </div>
     </div>
-  </div>
-  <div class="card-image">
-    <img class="photo" [src]="businessCardConfig.photoUrl">
   </div>
 </div>

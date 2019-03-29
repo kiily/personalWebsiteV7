@@ -10,41 +10,59 @@
         margin-bottom: cssvar(padding-20);
     }
     .card-content {
-        .personal-info {
-            font-size: cssvar(font-s);
-            .last-name,
-            .email {
-                margin-bottom: cssvar(padding-5);
-            }
-        }
-        .contact-methods {
+        display: flex;
+        .card-content-left {
             display: flex;
-            flex-wrap: wrap;
-            margin-top: cssvar(padding-20);
-            color: cssvar(black);
-            max-width: 55%;
+            flex-direction: column;
+            .personal-info {
+                font-size: cssvar(font-s);
+                .last-name,
+                .email {
+                    margin-bottom: cssvar(padding-5);
+                }
+            }
             .contact-methods-title {
                 font-size: cssvar(font-s);
-                flex-basis: 100%;
-                margin-bottom: cssvar(padding-10);
+                margin: cssvar(padding-10) 0;
             }
-            .contact-method {
-                flex-basis: 39%;
-                margin-right: cssvar(padding-20);
-                margin-bottom: cssvar(padding-10);
-                a {
-                    color: cssvar(black);
+            .contact-methods {
+                display: flex;
+                color: cssvar(black);
+                flex-wrap: wrap;
+                .contact-method {
+                    width: 50%;
+                    margin-bottom: cssvar(padding-10);
+                    a {
+                        color: cssvar(black);
+                    }
+                }
+            }
+        }
+        .card-content-right {
+            .card-image {
+                img {
+                    width: 100px;
                 }
             }
         }
     }
-    .card-image {
-        position: absolute;
-        margin: cssvar(padding-20);
-        top: 0;
-        right: 0;
-        img {
-            width: 122px;
+    
+}
+
+@media only screen and (max-width: 575px) {
+    .card-container {
+        .card-content {
+            .personal-info {
+                width: 50%;
+            }
+            .contact-methods {
+                flex-wrap: nowrap;
+            }
+        }
+        .card-image {
+            img {
+                width: 80px;
+            }
         }
     }
 }
