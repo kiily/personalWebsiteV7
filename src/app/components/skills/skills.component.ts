@@ -16,7 +16,6 @@ export class SkillsComponent implements OnInit {
   ngOnInit() {
     this.dataService.getLanguageSkillsData().subscribe( languageSkills => {
       this.languageSkills = languageSkills;
-      console.log('this.lnaguage', this.languageSkills, languageSkills);
     });
   }
 

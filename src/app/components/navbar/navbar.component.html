@@ -1,12 +1,20 @@
 <nav class="navbar-container">
     <div class="navbar-row">
-      <div class="navbar-title">
-        <span>MMV's Website</span>
+      <div class="navbar-collapsible" (click)="toggleNavbar()">
+        <span class="fa fa-l fa-bars"></span>
       </div>
-        <div class="navbar-links">
+      <div class="navbar-collapsible-links" *ngIf="!collapsed">
           <div class="navbar-link" *ngFor="let link of navbarLinks">
             <a class="navbar-link" [href]="link.href">{{link.linkText}}</a>
           </div>
+      </div>
+      <div class="navbar-title">
+        <span>MMV's Website</span>
+      </div>
+      <div class="navbar-links">
+        <div class="navbar-link" *ngFor="let link of navbarLinks">
+          <a class="navbar-link" [href]="link.href">{{link.linkText}}</a>
         </div>
+      </div>
     </div>
 </nav>

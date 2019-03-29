@@ -1,5 +1,6 @@
 @import '../../../styles/variables';
 
+// LESS Than 575px should collapse the navbar
 :host(.hide) {
   .navbar-container {
     transform: translateY(-40px);
@@ -14,6 +15,19 @@
   }
 }
 
+@mixin link-style() {
+    flex: 1;
+    font-family: $lato;
+    font-weight: bold;
+    color: cssvar(white);
+    a {
+      text-decoration: none;
+      &:hover {
+        color: cssvar(yellow);
+      }
+    }
+}
+
 .navbar-container {
   position: absolute;
   top: 0;
@@ -23,7 +37,23 @@
   overflow: hidden;
   z-index: 100;
   .navbar-row {
+    position: relative;
     display: flex;
+    .navbar-collapsible {
+      display: none;
+      color: cssvar(white);
+      padding-left: cssvar(padding-20);
+    }
+    .navbar-collapsible-links {
+      position: absolute;
+      top: 39px;
+      background: cssvar(dark);
+      padding: cssvar(padding-10);
+      .navbar-link {
+        @include link-style();
+        padding-bottom: cssvar(padding-5);
+      }
+    }
     .navbar-title {
       display: flex;
       font-family: $lato;
@@ -38,17 +68,26 @@
       align-items: center;
       font-size: 13px;
       .navbar-link {
-        flex: 1;
+        @include link-style();
         text-align: center;
-        font-family: $lato;
-        font-weight: bold;
-        color: cssvar(white);
-        a {
-          text-decoration: none;
-          &:hover {
-            color: cssvar(yellow);
-          }
-        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .navbar-container {
+    overflow: visible;
+    .navbar-row {
+      height: 40px;
+      align-items: center;
+
+      .navbar-collapsible {
+        display: block;
+        flex: 0.5;
+      }
+      .navbar-links {
+        display: none;
       }
     }
   }

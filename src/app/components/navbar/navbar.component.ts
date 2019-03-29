@@ -9,6 +9,7 @@ import { INavbarLinks } from '../../interfaces';
 export class NavbarComponent implements OnInit {
 
   public navbarLinks: INavbarLinks[];
+  public collapsed: boolean = true;
 
   constructor() { }
 
@@ -38,6 +39,10 @@ export class NavbarComponent implements OnInit {
         href: '#projects-feature',
         linkText: 'My Projects'
       }
-    ]
+    ];
+  }
+
+  toggleNavbar(): void {
+    this.collapsed = !this.collapsed;
   }
 }
