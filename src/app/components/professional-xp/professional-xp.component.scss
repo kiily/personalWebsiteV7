@@ -1,10 +1,11 @@
 @import '../../../styles/variables';
 
 #professional-xp-feature {
-    background: url("../../../assets/work.jpg") center center no-repeat;
-    background-size: cover;
-    width: 100%;
+    display: flex;
     .professional-xp-container {
+        background: url("../../../assets/work.jpg") center center no-repeat;
+        background-size: cover;
+        width: 100%;
         padding: cssvar(padding-20);
         .professional-xp-title {
             @include section-title();

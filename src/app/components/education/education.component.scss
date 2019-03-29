@@ -1,12 +1,12 @@
 @import '../../../styles/variables';
 
 #education-feature {
-    background: url("../../../assets/stars.jpg") center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    border-bottom: 2px solid black;
-
+    display: flex;
     .container {
+        background: url("../../../assets/stars.jpg") center center no-repeat;
+        background-size: cover;
+        width: 100%;
+        border-bottom: 2px solid black;
         .education-title {
             @include section_title();
         }

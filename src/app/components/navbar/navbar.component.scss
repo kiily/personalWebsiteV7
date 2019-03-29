@@ -20,6 +20,7 @@
   left: 0;
   right: 0;
   background: cssvar(dark);
+  overflow: hidden;
   z-index: 100;
   .navbar-row {
     display: flex;

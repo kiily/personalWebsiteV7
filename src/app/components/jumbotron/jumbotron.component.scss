@@ -1,53 +1,53 @@
 @import '../../../styles/variables';
 
 .cover-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url("../../../assets/voxel.png") center center no-repeat;
-  background-size: cover;
-  color: cssvar(white);
-  width: 100vw;
-  height: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  max-height: 700px;
-
-  .title {
-    font-family: $lobster;
-    font-weight: bold;
-    font-size: 50px;
-    margin-bottom: cssvar(padding-20);
-  }
-
-  .subtitle {
-    font-family: $bungee;
-    font-weight: bold;
-    color: cssvar(yellow);
-    font-size: cssvar(font-xl);
-    margin-bottom: cssvar(padding-20);
-
-  }
-
-  .scroll-button {
-    height: 2.8125rem;
-    width: 2.8125rem;
-    border-radius: 1.375rem;
-    border: solid 1px cssvar(yellow-dark);
-    background-color: cssvar(dark); 
+  .jumbotron-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../../../assets/voxel.png") center center no-repeat;
+    background-size: cover;
     color: cssvar(white);
-    outline: none;
-
-    &:hover {
-      background-color: cssvar(yellow);
-      color: cssvar(black);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    min-height: 450px;
+    .title {
+      font-family: $lobster;
+      font-weight: bold;
+      font-size: 50px;
+      margin-bottom: cssvar(padding-20);
     }
-
-    span {
+  
+    .subtitle {
+      font-family: $bungee;
+      font-weight: bold;
+      color: cssvar(yellow);
+      font-size: cssvar(font-xl);
+      margin-bottom: cssvar(padding-20);
+  
+    }
+  
+    .scroll-button {
+      height: 2.8125rem;
+      width: 2.8125rem;
+      border-radius: 1.375rem;
+      border: solid 1px cssvar(yellow-dark);
+      background-color: cssvar(dark); 
       color: cssvar(white);
+      outline: none;
+  
+      &:hover {
+        background-color: cssvar(yellow);
+        color: cssvar(black);
+      }
+  
+      span {
+        color: cssvar(white);
+      }
     }
   }
+
 
   
 }
