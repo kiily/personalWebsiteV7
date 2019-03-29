@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { INavbarLinks } from '../../interfaces';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
@@ -9,10 +9,13 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   animations: [
     trigger('collapse', [
       state('collapsed', style({
-        opacity: 0
+        opacity: 0,
+        display: 'none'
       })),
       state('open', style({
-        opacity: 1
+        opacity: 1,
+        display: 'flex',
+        ['flex-direction']: 'column'
       })),
       transition('open => collapsed', [
         animate('0.5s')
@@ -25,8 +28,23 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class NavbarComponent implements OnInit {
 
+  @HostListener('click')
+  clickInside() {
+    this.wasClickInside = true;
+  }
+
+  @HostListener('document:click')
+  clickout() {
+    if (!this.wasClickInside) {
+      this.collapsed = true;
+    }
+    this.wasClickInside = false;
+  }
+
   public navbarLinks: INavbarLinks[];
   public collapsed: boolean = true;
+
+  private wasClickInside: boolean = false;
 
   constructor() { }
 
